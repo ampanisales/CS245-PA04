@@ -25,6 +25,8 @@ public class Practice4Test {
 	
 	
 	public boolean isPalindrome(String item) {
+		item = item.toLowerCase();
+		item = item.replaceAll("[^A-Za-z]+", "");
 		clearData();
 		for (int i = 0; i < item.length(); i++) {
 			stack.push(item.substring(i, i+1));
